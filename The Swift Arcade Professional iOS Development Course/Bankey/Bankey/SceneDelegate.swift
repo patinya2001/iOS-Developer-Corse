@@ -22,7 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-        window?.rootViewController = LoginViewController()
+        //window?.rootViewController = LoginViewController()
+        window?.rootViewController = OnboardingViewController()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
