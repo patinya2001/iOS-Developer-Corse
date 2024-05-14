@@ -9,12 +9,27 @@ import UIKit
 
 class OnboardingViewController: UIViewController {
 
-    let onboardingView = OnboardingView(title: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel like you are back in 1989.", image: UIImage(named: "delorean")!)
+    let stackView = UIStackView()
+    let imageView = UIImageView()
+    let label = UILabel()
+    
+    var imageName: String
+    var titleText: String
     
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
         layout()
+    }
+    
+    init(imageName: String, titleText: String) {
+        self.imageName = imageName
+        self.titleText = titleText
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
@@ -22,17 +37,41 @@ class OnboardingViewController: UIViewController {
 //MARK: - Style and Layout
 extension OnboardingViewController {
     private func style() {
+        view.backgroundColor = .systemBackground
         
+        // stackView
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        
+        // imageView
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: imageName)
+        
+        // label
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.adjustsFontForContentSizeCategory = true
+        label.numberOfLines = 0
+        label.text = titleText
+        label.font = UIFont.preferredFont(forTextStyle: .title3)
     }
     
     private func layout() {
-        // onboardingView
-        view.addSubview(onboardingView)
+        // imageView
+        stackView.addArrangedSubview(imageView)
+        
+        // label
+        stackView.addArrangedSubview(label)
+        
+        // stackView
+        view.addSubview(stackView)
         NSLayoutConstraint.activate([
-            onboardingView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            onboardingView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            onboardingView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: onboardingView.trailingAnchor, multiplier: 1)
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: stackView.trailingAnchor, multiplier: 1)
         ])
     }
 }
