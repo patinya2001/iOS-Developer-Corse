@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.backgroundColor = .systemBackground
-        setRootViewController(vc: loginViewController, animated: false)
+        setRootViewController(vc: AccountSummaryViewController(), animated: false)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
