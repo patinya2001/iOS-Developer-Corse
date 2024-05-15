@@ -13,6 +13,7 @@ extension UIViewController {
         navBarAppearance.configureWithTransparentBackground()
         UINavigationBar.appearance().standardAppearance = navBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        navBarAppearance.backgroundColor = .systemTeal
     }
     
     
