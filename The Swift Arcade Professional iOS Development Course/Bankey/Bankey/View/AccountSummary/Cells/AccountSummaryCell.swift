@@ -20,7 +20,9 @@ class AccountSummaryCell: UITableViewCell {
     let chevronImageView = UIImageView()
     
     static let reuseID = "AccountSummaryCell"
-    static let rowHeight: CGFloat = 100
+    static let rowHeight: CGFloat = 120
+    
+    let viewModel: ViewModel? = nil
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -34,6 +36,8 @@ class AccountSummaryCell: UITableViewCell {
     
 }
 
+
+//MARK: - Setup and Layout
 extension AccountSummaryCell {
     
     private func setup() {
@@ -61,7 +65,6 @@ extension AccountSummaryCell {
         // balanceAmountLabel
         balanceAmountLabel.translatesAutoresizingMaskIntoConstraints = false
         balanceAmountLabel.textAlignment = .right
-        balanceAmountLabel.text = "$1,000.00"
         
         // balanceStackView
         balanceStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -118,5 +121,26 @@ extension AccountSummaryCell {
             chevronImageView.topAnchor.constraint(equalTo: underlineView.bottomAnchor),
             trailingAnchor.constraint(equalToSystemSpacingAfter: chevronImageView.trailingAnchor, multiplier: 2)
         ])
+    }
+}
+
+
+//MARK: - Configure
+extension AccountSummaryCell {
+    func configure(with vm: ViewModel) {
+        typeLabel.text = vm.accountType.rawValue
+        nameLabel.text = vm.accountName
+        balanceAmountLabel.attributedText = vm.balanceAsAttributedString
+        switch vm.accountType {
+        case .Banking:
+            underlineView.backgroundColor = .systemTeal
+            balanceLabel.text = "Current balance"
+        case .CreditCard:
+            underlineView.backgroundColor = .systemOrange
+            balanceLabel.text = "Current balance"
+        case .Investment:
+            underlineView.backgroundColor = .systemPurple
+            balanceLabel.text = "Value"
+        }
     }
 }

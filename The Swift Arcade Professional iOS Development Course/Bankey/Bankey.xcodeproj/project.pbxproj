@@ -24,6 +24,10 @@
 		629DECD22BF1801B0034AEAF /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629DECD12BF1801B0034AEAF /* LocalState.swift */; };
 		62C6DA122BF2C84A0046966C /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6DA112BF2C84A0046966C /* UIViewController+Ext.swift */; };
 		62C6DA152BF2CB400046966C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6DA142BF2CB400046966C /* MainViewController.swift */; };
+		62F93D812BF6B0EE0071CEED /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F93D802BF6B0EE0071CEED /* ViewModel.swift */; };
+		62F93D832BF6B2320071CEED /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F93D822BF6B2320071CEED /* AccountType.swift */; };
+		62F93D852BF6BB920071CEED /* Decimal+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F93D842BF6BB920071CEED /* Decimal+Ext.swift */; };
+		62F93D872BF6BE310071CEED /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F93D862BF6BE310071CEED /* CurrencyFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		629DECD12BF1801B0034AEAF /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		62C6DA112BF2C84A0046966C /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		62C6DA142BF2CB400046966C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		62F93D802BF6B0EE0071CEED /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		62F93D822BF6B2320071CEED /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
+		62F93D842BF6BB920071CEED /* Decimal+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Ext.swift"; sourceTree = "<group>"; };
+		62F93D862BF6BE310071CEED /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,7 @@
 		620E3A182BEE469000F6E899 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				62F93D7F2BF6B0D20071CEED /* AccountSummary */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +193,8 @@
 			children = (
 				629DECD12BF1801B0034AEAF /* LocalState.swift */,
 				62C6DA112BF2C84A0046966C /* UIViewController+Ext.swift */,
+				62F93D842BF6BB920071CEED /* Decimal+Ext.swift */,
+				62F93D862BF6BE310071CEED /* CurrencyFormatter.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -194,6 +205,15 @@
 				62C6DA142BF2CB400046966C /* MainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		62F93D7F2BF6B0D20071CEED /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				62F93D802BF6B0EE0071CEED /* ViewModel.swift */,
+				62F93D822BF6B2320071CEED /* AccountType.swift */,
+			);
+			path = AccountSummary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,10 +294,14 @@
 				629DECD22BF1801B0034AEAF /* LocalState.swift in Sources */,
 				62C6DA122BF2C84A0046966C /* UIViewController+Ext.swift in Sources */,
 				624D6DEA2BF01D8E0028AF2D /* OnboardingContainerViewController.swift in Sources */,
+				62F93D872BF6BE310071CEED /* CurrencyFormatter.swift in Sources */,
 				62759D1D2BED873E00308AF4 /* AppDelegate.swift in Sources */,
 				62759D312BED88DC00308AF4 /* LoginView.swift in Sources */,
 				624D6DEC2BF0295B0028AF2D /* OnboardingViewController.swift in Sources */,
+				62F93D812BF6B0EE0071CEED /* ViewModel.swift in Sources */,
+				62F93D832BF6B2320071CEED /* AccountType.swift in Sources */,
 				62759D1F2BED873E00308AF4 /* SceneDelegate.swift in Sources */,
+				62F93D852BF6BB920071CEED /* Decimal+Ext.swift in Sources */,
 				629874832BEEC2AA00FEA4FA /* TitleView.swift in Sources */,
 				629DECCF2BF170160034AEAF /* DummyViewController.swift in Sources */,
 				620670F82BF4172D00E83A67 /* AccountSummaryViewController.swift in Sources */,
