@@ -7,10 +7,17 @@
 
 import UIKit
 
+//MARK: - Main
 class AccountSummaryViewController: UIViewController {
     
     var accounts: [ViewModel] = []
     var tableView = UITableView()
+    
+    lazy var logoutBarButtonItem: UIBarButtonItem = {
+        let barButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutTapped))
+        barButtonItem.tintColor = .label
+        return barButtonItem
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +25,19 @@ class AccountSummaryViewController: UIViewController {
     }
 }
 
+
+//MARK: - Setup
 extension AccountSummaryViewController {
     private func setup() {
+        view.backgroundColor = .systemTeal
+        setupNavigationBar()
         setupTableView()
         setupTableHeaderView()
         fetchData()
+    }
+    
+    func setupNavigationBar() {
+        navigationItem.rightBarButtonItem = logoutBarButtonItem
     }
     
     private func setupTableView() {
@@ -73,6 +88,8 @@ extension AccountSummaryViewController {
     }
 }
 
+
+//MARK: - UITableViewDataSource
 extension AccountSummaryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard !accounts.isEmpty else { return UITableViewCell() }
@@ -86,7 +103,17 @@ extension AccountSummaryViewController: UITableViewDataSource {
     }
 }
 
+
+//MARK: - UITableViewDelegate
 extension AccountSummaryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+}
+
+
+//MARK: - Action
+extension AccountSummaryViewController {
+    @objc func logoutTapped(sender: UIButton) {
+        NotificationCenter.default.post(name: .login, object: nil)
     }
 }

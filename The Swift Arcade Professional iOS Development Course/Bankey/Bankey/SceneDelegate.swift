@@ -26,13 +26,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.backgroundColor = .systemBackground
-
-        let vc = mainViewController
+        
+        registerForNotifications()
+        displayLogin()
+    }
+    
+    private func displayLogin() {
+        setRootViewController(vc: loginViewController)
+    }
+    
+    private func displayNextScreen() {
+        if LocalState.hasOnboarded {
+            prepMainView()
+            setRootViewController(vc: mainViewController)
+        } else {
+            setRootViewController(vc: onboardingContainerViewController)
+        }
+    }
+    
+    private func prepMainView() {
         mainViewController.setStatusBar()
         UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().tintColor = .systemTeal
-        window?.rootViewController = mainViewController
-        window?.makeKeyAndVisible()
+        UINavigationBar.appearance().backgroundColor = .systemTeal
+    }
+    
+    func registerForNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(didLogout), name: .login, object: nil)
+    }
+    
+    @objc func didLogout() {
+        setRootViewController(vc: loginViewController, duration: 0.1)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -68,11 +91,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //MARK: - LoginViewControllerDelegate
 extension SceneDelegate: LoginViewControllerDelegate {
     func didLogin() {
-        if LocalState.hasOnboarded {
-            setRootViewController(vc: mainViewController, duration: 0.3)
-        } else {
-            setRootViewController(vc: onboardingContainerViewController, duration: 0.3)
-        }
+        displayNextScreen()
     }
 }
 
@@ -80,16 +99,9 @@ extension SceneDelegate: LoginViewControllerDelegate {
 //MARK: - OnboardingContainerViewControllerDelegate
 extension SceneDelegate: OnboardingContainerViewControllerDelegate {
     func didFinishOnboarding() {
+        prepMainView()
         LocalState.hasOnboarded = true
         setRootViewController(vc: mainViewController, duration: 0.1)
-    }
-}
-
-
-//MARK: - DummyViewControllerDelegate
-extension SceneDelegate: DummyViewControllerDelegate {
-    func didLogout() {
-        setRootViewController(vc: loginViewController, duration: 0.1)
     }
 }
 
