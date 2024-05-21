@@ -22,7 +22,7 @@ class AccountSummaryCell: UITableViewCell {
     static let reuseID = "AccountSummaryCell"
     static let rowHeight: CGFloat = 120
     
-    let viewModel: ViewModel? = nil
+    let accountModel: AccountModel? = nil
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -129,7 +129,7 @@ extension AccountSummaryCell {
 
 //MARK: - Configure
 extension AccountSummaryCell {
-    func configure(with vm: ViewModel) {
+    func configure(with vm: AccountModel) {
         typeLabel.text = vm.accountType.rawValue
         nameLabel.text = vm.accountName
         balanceAmountLabel.attributedText = vm.balanceAsAttributedString

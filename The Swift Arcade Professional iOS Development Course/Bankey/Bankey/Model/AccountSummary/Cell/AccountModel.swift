@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct ViewModel {
+struct AccountModel {
     let accountType: AccountType
     let accountName: String
     let balance: Decimal

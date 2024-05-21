@@ -10,6 +10,10 @@ import UIKit
 class AccountSummaryHeaderView: UIView {
     
     @IBOutlet var contentView: UIView!
+    @IBOutlet var welcomeLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    
     
     let shakeyBellView = ShakeyBellView()
     
@@ -34,6 +38,12 @@ class AccountSummaryHeaderView: UIView {
     private func commonInit() {
         let bundle = Bundle(for: AccountSummaryHeaderView.self)
         bundle.loadNibNamed("AccountSummaryHeaderView", owner: self, options: nil)
+    }
+    
+    func configure(profileModel: ProfileModel) {
+        welcomeLabel.text = profileModel.welcomeMessage
+        nameLabel.text = profileModel.name
+        dateLabel.text = profileModel.dateFormatted
     }
 }
 
