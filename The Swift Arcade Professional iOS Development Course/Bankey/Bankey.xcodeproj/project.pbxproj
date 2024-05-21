@@ -28,6 +28,8 @@
 		62BAAD412BFCAC43003F747B /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BAAD402BFCAC43003F747B /* AccountManager.swift */; };
 		62BAAD432BFCACA3003F747B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BAAD422BFCACA3003F747B /* Account.swift */; };
 		62BAAD462BFCACD9003F747B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BAAD452BFCACD9003F747B /* NetworkError.swift */; };
+		62BAAD4A2BFCB57A003F747B /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BAAD492BFCB57A003F747B /* ProfileTests.swift */; };
+		62BAAD4C2BFCB63F003F747B /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BAAD4B2BFCB63F003F747B /* AccountTests.swift */; };
 		62C6DA122BF2C84A0046966C /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6DA112BF2C84A0046966C /* UIViewController+Ext.swift */; };
 		62C6DA152BF2CB400046966C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6DA142BF2CB400046966C /* MainViewController.swift */; };
 		62E6222A2BFA959600C622E7 /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E622292BFA959600C622E7 /* NSNotificationName.swift */; };
@@ -75,6 +77,8 @@
 		62BAAD402BFCAC43003F747B /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		62BAAD422BFCACA3003F747B /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		62BAAD452BFCACD9003F747B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		62BAAD492BFCB57A003F747B /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
+		62BAAD4B2BFCB63F003F747B /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		62C6DA112BF2C84A0046966C /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		62C6DA142BF2CB400046966C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		62E622292BFA959600C622E7 /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
@@ -274,6 +278,23 @@
 			path = NetworkError;
 			sourceTree = "<group>";
 		};
+		62BAAD472BFCB538003F747B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				62F6D27F2BF7F7E000E22C15 /* BankeyUnitTests.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		62BAAD482BFCB548003F747B /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				62BAAD492BFCB57A003F747B /* ProfileTests.swift */,
+				62BAAD4B2BFCB63F003F747B /* AccountTests.swift */,
+			);
+			path = AccountSummary;
+			sourceTree = "<group>";
+		};
 		62C6DA132BF2CB250046966C /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,7 +306,8 @@
 		62F6D27E2BF7F7E000E22C15 /* BankeyUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				62F6D27F2BF7F7E000E22C15 /* BankeyUnitTests.swift */,
+				62BAAD482BFCB548003F747B /* AccountSummary */,
+				62BAAD472BFCB538003F747B /* Utility */,
 			);
 			path = BankeyUnitTests;
 			sourceTree = "<group>";
@@ -437,6 +459,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				62F6D2802BF7F7E000E22C15 /* BankeyUnitTests.swift in Sources */,
+				62BAAD4C2BFCB63F003F747B /* AccountTests.swift in Sources */,
+				62BAAD4A2BFCB57A003F747B /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
