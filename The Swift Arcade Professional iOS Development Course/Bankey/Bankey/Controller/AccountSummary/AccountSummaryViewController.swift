@@ -41,7 +41,7 @@ extension AccountSummaryViewController {
         fetchDataAndLoadViews()
     }
     
-    func setupNavigationBar() {
+    private func setupNavigationBar() {
         navigationItem.rightBarButtonItem = logoutBarButtonItem
     }
     
@@ -70,9 +70,10 @@ extension AccountSummaryViewController {
         var size = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
         size.width = UIScreen.main.bounds.width
         headerView.frame.size = size
-        
         tableView.tableHeaderView = headerView
     }
+    
+    
 }
 
 
@@ -109,24 +110,32 @@ extension AccountSummaryViewController {
 // MARK: - Networking
 extension AccountSummaryViewController {
     private func fetchDataAndLoadViews() {
+        let group = DispatchGroup()
+        
+        group.enter()
         profileManager.fetchProfile(forUserId: "1") { result in
             switch result {
             case .success(let profile):
                 self.configureTableHeaderView(with: profile)
-                self.tableView.reloadData()
             case .failure(let error):
                 print(error.localizedDescription)
             }
+            group.leave()
         }
         
+        group.enter()
         accountManager.fetchAccounts(forUserId: "1") { result in
             switch result {
             case .success(let accounts):
                 self.configureTableCells(with: accounts)
-                self.tableView.reloadData()
             case .failure(let error):
                 print(error.localizedDescription)
             }
+            group.leave()
+        }
+        
+        group.notify(queue: .main) {
+            self.tableView.reloadData()
         }
     }
     
