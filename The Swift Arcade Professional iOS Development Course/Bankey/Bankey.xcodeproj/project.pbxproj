@@ -10,6 +10,9 @@
 		620670F82BF4172D00E83A67 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620670F72BF4172D00E83A67 /* AccountSummaryViewController.swift */; };
 		620670FA2BF4196A00E83A67 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620670F92BF4196A00E83A67 /* AccountSummaryHeaderView.swift */; };
 		620670FC2BF4198600E83A67 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 620670FB2BF4198600E83A67 /* AccountSummaryHeaderView.xib */; };
+		623EF6B42BFD246000BCF94A /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EF6B32BFD246000BCF94A /* UIColor+Ext.swift */; };
+		623EF6B62BFD249900BCF94A /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EF6B52BFD249900BCF94A /* SkeletonLoadable.swift */; };
+		623EF6B82BFD263800BCF94A /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623EF6B72BFD263800BCF94A /* SkeletonCell.swift */; };
 		624D6DEA2BF01D8E0028AF2D /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624D6DE92BF01D8E0028AF2D /* OnboardingContainerViewController.swift */; };
 		624D6DEC2BF0295B0028AF2D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624D6DEB2BF0295B0028AF2D /* OnboardingViewController.swift */; };
 		626F10902BF5576000A86971 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F108F2BF5576000A86971 /* AccountSummaryCell.swift */; };
@@ -57,6 +60,9 @@
 		620670F72BF4172D00E83A67 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 		620670F92BF4196A00E83A67 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		620670FB2BF4198600E83A67 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
+		623EF6B32BFD246000BCF94A /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		623EF6B52BFD249900BCF94A /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
+		623EF6B72BFD263800BCF94A /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
 		624D6DE92BF01D8E0028AF2D /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		624D6DEB2BF0295B0028AF2D /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		626F108F2BF5576000A86971 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
@@ -196,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				626F108F2BF5576000A86971 /* AccountSummaryCell.swift */,
+				623EF6B52BFD249900BCF94A /* SkeletonLoadable.swift */,
+				623EF6B72BFD263800BCF94A /* SkeletonCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -245,6 +253,7 @@
 				62E622292BFA959600C622E7 /* NSNotificationName.swift */,
 				629DECD12BF1801B0034AEAF /* LocalState.swift */,
 				62F93D862BF6BE310071CEED /* CurrencyFormatter.swift */,
+				623EF6B32BFD246000BCF94A /* UIColor+Ext.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -423,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				623EF6B82BFD263800BCF94A /* SkeletonCell.swift in Sources */,
 				626F10902BF5576000A86971 /* AccountSummaryCell.swift in Sources */,
 				62BAAD462BFCACD9003F747B /* NetworkError.swift in Sources */,
 				620670FA2BF4196A00E83A67 /* AccountSummaryHeaderView.swift in Sources */,
@@ -431,6 +441,7 @@
 				62BAAD3A2BFC90B5003F747B /* Date+Ext.swift in Sources */,
 				629DECD22BF1801B0034AEAF /* LocalState.swift in Sources */,
 				62C6DA122BF2C84A0046966C /* UIViewController+Ext.swift in Sources */,
+				623EF6B62BFD249900BCF94A /* SkeletonLoadable.swift in Sources */,
 				62E622302BFAB80100C622E7 /* UIView+Ext.swift in Sources */,
 				624D6DEA2BF01D8E0028AF2D /* OnboardingContainerViewController.swift in Sources */,
 				62F93D872BF6BE310071CEED /* CurrencyFormatter.swift in Sources */,
@@ -450,6 +461,7 @@
 				62BAAD432BFCACA3003F747B /* Account.swift in Sources */,
 				62BAAD382BFC8FA8003F747B /* ProfileModel.swift in Sources */,
 				62E6222E2BFAB00100C622E7 /* ShakeyBellView.swift in Sources */,
+				623EF6B42BFD246000BCF94A /* UIColor+Ext.swift in Sources */,
 				620670F82BF4172D00E83A67 /* AccountSummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
