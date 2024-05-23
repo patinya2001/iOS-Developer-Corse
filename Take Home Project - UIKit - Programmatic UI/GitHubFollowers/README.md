@@ -1,1 +1,1 @@
-# Github Followers
+# GitHub Followers
