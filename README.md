@@ -11,7 +11,7 @@ This repository is used for storing work from various iOS developer courses.
 
 [Link to course in this repository]()
 
-<img  src="https://github.com/patinya2001/iOS-Developer-Corses/assets/149204731/90d5183f-b0a0-4c1b-9573-1ee4c9dc1e21"  alt="Description"  width="800"  height="595">
+<img  src="https://github.com/patinya2001/iOS-Developer-Corses/assets/149204731/90d5183f-b0a0-4c1b-9573-1ee4c9dc1e21"  alt="Description"  width="533"  height="397">
 
 ## GitHub Followers: Take Home Project - UIKit - Programmatic UI
 [Link to course](https://www.youtube.com/watch?v=JzngncpZLuw&t=3478s)
@@ -23,4 +23,4 @@ This repository is used for storing work from various iOS developer courses.
 
 [Link to course in this repository](The%20Swift%20Arcade%20Professional%20iOS%20Development%20Course/)
 
-<img  src="https://github.com/patinya2001/iOS-Developer-Corses/assets/149204731/9b577b42-7e30-4522-bb53-7e694d081ab5"  alt="Description"  width="800"  height="595">
+<img  src="https://github.com/patinya2001/iOS-Developer-Corses/assets/149204731/9b577b42-7e30-4522-bb53-7e694d081ab5"  alt="Description"  width="533"  height="397">
