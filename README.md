@@ -28,7 +28,7 @@ Instructor: Sean Allen [X](https://x.com/seanallen_dev)
 
 ## The Swift Arcade Professional iOS Development Course
 
-Instructor: Jonathan Rasmusson [Linkedin](https://www.linkedin.com/in/jonathanrasmusson/))
+Instructor: Jonathan Rasmusson [Linkedin](https://www.linkedin.com/in/jonathanrasmusson/)
 
 [Link to course](https://www.udemy.com/course/the-swift-arcade-professional-ios-development-course-uikit/?referralCode=2A5FFBFFF1F8013C3271&couponCode=KEEPLEARNING)
 
