@@ -38,7 +38,7 @@ Your financial statements are displayed on an account summary page that opens on
 
 <p>
 <img width="349" alt="7" src="https://github.com/patinya2001/iOS-Developer-Corses/assets/149204731/f5de1e3e-18e8-4f06-a66c-e361b7135de2">
-<img width="324" alt="4" src="https://github.com/patinya2001/iOS-Developer-Corses/assets/149204731/e4007457-be21-48ea-9a52-6cc00da87d41">
+<img width="331" alt="8" src="https://github.com/patinya2001/iOS-Developer-Corses/assets/149204731/7e5686dc-55dc-408e-bc4f-68e8f80e5f4b">
 </p>
 
 The account summary page uses UITableView, a scrollable view, to display financial transactions.
