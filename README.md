@@ -18,7 +18,7 @@ Instructor: Dr. Angela Yu [Linkedin](https://www.linkedin.com/in/angela-yu-963a5
 
 <img  src="https://github.com/patinya2001/iOS-Developer-Corses/assets/149204731/90d5183f-b0a0-4c1b-9573-1ee4c9dc1e21"  alt="Description"  width="533"  height="397">
 
-## GitHub Followers: Take Home Project - UIKit - Programmatic UI
+## GitHub Followers: Take Home Project - UIKit - Programmatic UI (in progress)
 
 Instructor: Sean Allen [X](https://x.com/seanallen_dev)
 
