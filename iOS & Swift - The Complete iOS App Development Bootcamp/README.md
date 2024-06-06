@@ -5,8 +5,8 @@ This course covers the fundamentals of iOS development with UIKit and Storyboard
 ## Table of contents
 
 - [Dicee-iOS13](Dicee-iOS13/)
-- [Xylophone](Xylophone/)
-- [EggTimer](EggTimer/)
+- [Xylophone-iOS13](Xylophone-iOS13/)
+- [EggTimer-iOS13](EggTimer-iOS13/)
 - [Quizzler-iOS13](Quizzler-iOS13/)
 - [Destini-iOS13](Destini-iOS13/)
 - [BMI-Calculator-iOS13](BMI-Calculator-iOS13/)
